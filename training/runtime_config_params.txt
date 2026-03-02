@@ -12,7 +12,21 @@ yolo detect train \
 yolo detect train \
   data=exports/yolo/data.yaml \
   model=yolov8n.pt \
-  imgsz=512 \
-  epochs=20 \
+  imgsz=768 \
+  epochs=30 \
   batch=4 \
+  device=mps
+
+  yolo detect val \
+  model=runs/detect/train/weights/best.pt \
+  data=exports/yolo/data.yaml \
+  save_json=True
+
+
+yolo detect train \
+  data=exports/yolo/data.yaml \
+  model=yolov8n.pt \
+  imgsz=768 \
+  epochs=30 \
+  batch=8 \
   device=mps

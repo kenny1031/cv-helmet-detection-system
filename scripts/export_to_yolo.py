@@ -16,7 +16,7 @@ def ensure_dirs() -> None:
         os.makedirs(f"{EXPORT_ROOT}/images/{split}", exist_ok=True)
         os.makedirs(f"{EXPORT_ROOT}/labels/{split}", exist_ok=True)
 
-def export_split(dataset, split_name: str) -> None:
+def export_split(dataset: fo.Dataset, split_name: str) -> None:
     print(f"\nExporting {split_name}...")
 
     view = dataset.match({"split": split_name})

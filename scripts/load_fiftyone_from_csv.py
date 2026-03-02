@@ -8,7 +8,7 @@ DATA_NAME = "helmet_hardhats_csv"
 
 CLASSES = ["Hardhat", "NO-Hardhat"]
 
-def load_split(dataset, split_name):
+def load_split(dataset: fo.Dataset, split_name: str) -> None:
     print(f"\nLoading {split_name}...")
 
     split_dir = os.path.join(DATA_ROOT, split_name)
