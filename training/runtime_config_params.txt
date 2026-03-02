@@ -1,0 +1,18 @@
+Notebook for runtime configuration parameters
+
+yolo detect train \
+  data=exports/yolo/data.yaml \
+  model=yolov8n.pt \
+  imgsz=512 \
+  epochs=50 \
+  batch=8 \
+  device=mps
+
+
+yolo detect train \
+  data=exports/yolo/data.yaml \
+  model=yolov8n.pt \
+  imgsz=512 \
+  epochs=20 \
+  batch=4 \
+  device=mps
