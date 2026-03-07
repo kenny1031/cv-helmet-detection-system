@@ -40,9 +40,9 @@ htmlcov/
 # =========================
 
 # Raw datasets
-data/train
-data/valid
-data/test
+data/train/
+data/valid/
+data/test/
 
 # YOLO exports
 exports/
