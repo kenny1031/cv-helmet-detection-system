@@ -28,5 +28,5 @@ yolo detect train \
   model=yolov8n.pt \
   imgsz=768 \
   epochs=30 \
-  batch=8 \
+  batch=4 \
   device=mps

@@ -1,9 +1,11 @@
 import fiftyone as fo
 from ultralytics import YOLO
 from tqdm import tqdm
+import sys
 
+version = sys.argv[1]
 DATASET_NAME = "helmet_hardhats_csv"
-MODEL_PATH = "runs/detect/train/weights/best.pt"
+MODEL_PATH = f"runs/detect/train{version}/weights/best.pt"
 
 def main():
     # Load data
