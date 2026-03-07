@@ -52,8 +52,10 @@ FastAPI Serving Layer
 api/            FastAPI inference service
 configs/        Dataset / training configuration
 data/           Dataset preparation utilities
+runs/           Training/validation statistics and saved models
 training/       Model training and evaluation
 inference/      Prediction and benchmarking
+examples/       Sample images for testing
 scripts/        Data processing and analysis scripts
 tests/          Unit tests
 notebooks/      Exploratory analysis
@@ -154,6 +156,17 @@ Inference benchmark:
 |Device|FPS|
 |------|------|
 |Apple M1 (MPS)|~8-10 FPS|
+
+---
+
+# Inference Performance
+
+Device: Apple M1 (MPS)  
+Model: YOLOv8n  
+Image size: 768  
+
+Latency: ~100ms per image  
+Throughput: ~10 FPS
 
 --- 
 

@@ -48,7 +48,6 @@ data/test
 exports/
 
 # Training outputs
-runs/
 ultralytics/
 wandb/
 mlruns/
