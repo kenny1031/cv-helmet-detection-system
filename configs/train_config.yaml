@@ -1,0 +1,7 @@
+model: yolov8n.pt
+data: exports/yolo/data.yaml
+
+imgsz: 768
+epochs: 50
+batch: 8
+device: mps

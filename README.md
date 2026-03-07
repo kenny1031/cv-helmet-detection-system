@@ -87,11 +87,16 @@ This dataset contains many **small objects and partially occluded targets**, mak
 # Model Training
 Model: **YOLOv8n (Ultralytics)**
 
-Training configuration:
+Training configuration in `configs/train_config.yml`:
 ```
 image size: 512 / 768
 epochs: 50
-optimiser: SGD
+batch: 8
+device: mps
+```
+Usage:
+```
+python training/train.py
 ```
 
 ---
@@ -148,6 +153,37 @@ Example response:
 }
 ```
 
+--- 
+
+# Running Tests
+
+The project includes lightweight tests to validate the main pipeline components.
+
+Test coverage includes:
+
+* Dataset format validation  
+* Model loading  
+* Inference output format  
+
+Run all tests with:
+```
+pytest tests/
+```
+Example output:
+```
+============================================ test session starts =============================================
+platform darwin -- Python 3.10.19, pytest-9.0.2, pluggy-1.6.0
+rootdir: /Users/kennyyu/cv-helmet-detection-system
+configfile: pyproject.toml
+plugins: anyio-4.12.1
+collected 5 items                                                                                            
+
+tests/test_data_pipeline.py ..                                                                         [ 40%]
+tests/test_inference.py ..                                                                             [ 80%]
+tests/test_training.py .                                                                               [100%]
+
+============================================= 5 passed in 2.26s ==============================================
+```
 ---
 
 # Benchmark
@@ -168,7 +204,7 @@ Image size: 768
 Latency: ~100ms per image  
 Throughput: ~10 FPS
 
---- 
+---
 
 # Future Improvements
 * Larger backbone models (YOLOv8s / YOLOv8m)
